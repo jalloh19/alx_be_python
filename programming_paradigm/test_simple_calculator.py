@@ -20,7 +20,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(0, 10), 0)
         self.assertEqual(self.calc.multiply(-2, 3), -6)
 
-    def test_divide(self):
+    def test_division(self):
         self.assertEqual(self.calc.divide(10, 2), 5)
         self.assertEqual(self.calc.divide(0, 1), 0)
         self.assertIsNone(self.calc.divide(10, 0))  # Edge case
