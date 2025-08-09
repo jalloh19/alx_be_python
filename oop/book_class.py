@@ -1,14 +1,14 @@
 class Book:
-    def __init__(self, title, author, pages):
+    def __init__(self, title, author, year):
         self.title = title
         self.author = author
-        self.pages = pages
+        self.year = year
+
+    def __del__(self):
+        print(f"Deleting {self.title}")
 
     def __str__(self):
-        # Human-readable string (e.g., for print(book))
-        return f"'{self.title}' by {self.author}, {self.pages} pages"
+        return f"{self.title} by {self.author}, published in {self.year}"
 
     def __repr__(self):
-        # Unambiguous string for debugging
-        return f"Book(title={self.title!r}, author={self.author!r}, pages={self.pages!r})"
-
+        return f"Book('{self.title}', '{self.author}', {self.year})"
